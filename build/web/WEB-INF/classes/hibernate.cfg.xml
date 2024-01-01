@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/newwave?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="POJOS/District.hbm.xml"/>
+    <mapping resource="POJOS/User.hbm.xml"/>
+    <mapping resource="POJOS/AdType.hbm.xml"/>
+    <mapping resource="POJOS/MainCatagory.hbm.xml"/>
+    <mapping resource="POJOS/InvoiceHasAdvert.hbm.xml"/>
+    <mapping resource="POJOS/LoginSession.hbm.xml"/>
+    <mapping resource="POJOS/Advert.hbm.xml"/>
+    <mapping resource="POJOS/Invoice.hbm.xml"/>
+    <mapping resource="POJOS/UserType.hbm.xml"/>
+    <mapping resource="POJOS/Cart.hbm.xml"/>
+    <mapping resource="POJOS/Message.hbm.xml"/>
+    <mapping resource="POJOS/AdReview.hbm.xml"/>
+    <mapping resource="POJOS/Page.hbm.xml"/>
+    <mapping resource="POJOS/SubCatagory.hbm.xml"/>
+    <mapping resource="POJOS/CartItems.hbm.xml"/>
+    <mapping resource="POJOS/Interfaces.hbm.xml"/>
+    <mapping resource="POJOS/UserTypeHasInterfaces.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2016 8:20:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.Page" table="page" catalog="newwave" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="mainCatagory" class="POJOS.MainCatagory" fetch="select">
+            <column name="main_catagory_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="POJOS.User" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <property name="title" type="string">
+            <column name="title" length="45" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="500" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="contactPerson" type="string">
+            <column name="contact_person" length="45" />
+        </property>
+        <property name="tel" type="java.lang.Integer">
+            <column name="tel" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="500" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" />
+        </property>
+        <property name="openTime" type="string">
+            <column name="open_time" length="45" />
+        </property>
+        <property name="closingTime" type="string">
+            <column name="closing_time" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

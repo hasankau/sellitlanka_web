@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2016 8:20:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.MainCatagory" table="main_catagory" catalog="newwave" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="catagory" type="string">
+            <column name="catagory" length="45" />
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="status" />
+        </property>
+        <set name="adverts" table="advert" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="main_catagory_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.Advert" />
+        </set>
+        <set name="pages" table="page" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="main_catagory_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.Page" />
+        </set>
+        <set name="subCatagories" table="sub_catagory" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="main_catagory_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.SubCatagory" />
+        </set>
+    </class>
+</hibernate-mapping>

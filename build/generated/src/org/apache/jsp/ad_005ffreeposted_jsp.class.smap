@@ -1,0 +1,32 @@
+SMAP
+ad_005ffreeposted_jsp.java
+JSP
+*S JSP
+*F
++ 0 ad_freeposted.jsp
+ad_freeposted.jsp
++ 1 menu.jsp
+includes/menu.jsp
++ 2 footer.jsp
+includes/footer.jsp
+*L
+5,13:59
+17,7:71
+23,21:78
+1#1,8:99
+9,5:108
+13,3:113
+16,3:116,3
+19,14:125
+32,2:139
+33,2:141
+35:143,3
+36,12:146
+43#0,36:157
+1#2:193
+6:198,2
+7,39:200
+46:239,3
+47,14:242
+78#0,5:256
+*E

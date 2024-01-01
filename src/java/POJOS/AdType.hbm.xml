@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2016 8:20:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.AdType" table="ad_type" catalog="newwave" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <property name="status" type="java.lang.Boolean">
+            <column name="status" />
+        </property>
+        <set name="adverts" table="advert" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ad_type_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.Advert" />
+        </set>
+        <set name="cartItemses" table="cart_items" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ad_type_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.CartItems" />
+        </set>
+    </class>
+</hibernate-mapping>

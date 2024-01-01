@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 22, 2016 8:20:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.District" table="district" catalog="newwave" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="district" type="string">
+            <column name="district" length="45" />
+        </property>
+        <set name="adverts" table="advert" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="district_id" not-null="true" />
+            </key>
+            <one-to-many class="POJOS.Advert" />
+        </set>
+    </class>
+</hibernate-mapping>

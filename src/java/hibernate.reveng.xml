@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="newwave"/>
+  <table-filter match-name="invoice_has_advert"/>
+  <table-filter match-name="advert"/>
+  <table-filter match-name="district"/>
+  <table-filter match-name="login_session"/>
+  <table-filter match-name="interfaces"/>
+  <table-filter match-name="user_type_has_interfaces"/>
+  <table-filter match-name="message"/>
+  <table-filter match-name="cart"/>
+  <table-filter match-name="ad_review"/>
+  <table-filter match-name="page"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="cart_items"/>
+  <table-filter match-name="invoice"/>
+  <table-filter match-name="sub_catagory"/>
+  <table-filter match-name="user_type"/>
+  <table-filter match-name="main_catagory"/>
+  <table-filter match-name="ad_type"/>
+</hibernate-reverse-engineering>
